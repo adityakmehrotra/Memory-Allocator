@@ -34,32 +34,27 @@ The allocator is designed to simulate a process's heap in a memory-mapped segmen
 ## Usage
 1. Initialize the Heap: Before any allocation or freeing operations, initialize the heap with the desired size.
 ```c
+// Initialize heap with 1024 bytes
 init_heap(1024);
 ```
 
-Initializes heap with 1024 bytes
-
 2. Allocate Memory: Use balloc() to request memory from the heap.
 ```c
+// Allocate 100 bytes
 void *ptr = balloc(100);
 ```
 
-Allocates 100 bytes
-
 3. Free Memory: Use bfree() to release allocated memory.
 ```c
+// Free the previously allocated 100 bytes
 bfree(ptr);
 ```
 
-Frees the previously allocated 100 bytes
-
 4. Display Heap: To view the current status of the heap, including allocated and free blocks:
 ```c
-Copy code
+// Display heap blocks and their statuses
 disp_heap();
 ```
-
-Displays heap blocks and their statuses
 
 ### Contributing
 Contributions are welcome! Please fork the repository and submit pull requests with your suggested changes. For major changes or enhancements, please open an issue first to discuss your ideas.
